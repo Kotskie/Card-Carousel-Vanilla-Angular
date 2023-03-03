@@ -1,0 +1,22 @@
+<div class="carousel-container">
+    <div class="carousel-wrapper"
+        [style.transform]="'translateX('+translateCardsLogic()+'px)'">
+        <div *ngFor="let card of cards; let i = index">
+            <app-card
+            *ngIf="shouldDisplayCard(i)"
+            [card]="card" 
+            [cards]="cards" 
+            [selectedIndex]="i"
+            [focusedCard]="focusedCard"
+            [cardWidth]="cardWidth"
+            [cardMargin]="cardMargin"
+            ></app-card>
+        </div>
+    </div>
+</div>
+<div class="controls-container">
+    <div class="controls">
+        <button type="button" (click)="focusPrevious($event)"><</button>
+        <button type="button" (click)="focusNext($event)">></button>
+    </div>
+</div>

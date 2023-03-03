@@ -1,0 +1,15 @@
+<div class="carousel-card"
+    [attr.data-target]="selectedIndex === card.id ? 'focused' : ''"
+    [ngClass]="{ 'carousel-card--focused': selectedIndex === focusedCard }"
+    [style.width.px]="cardWidth ? +cardWidth : 0"
+    [style.margin-right.px]="selectedIndex === cards.length - 1 ? 0 : +cardMargin">
+    <div class="card-image">
+        <img [src]="card.image" [alt]="card.title">
+    </div>
+    <div class="card-content">
+        <h2 class="card-title">{{ card.title }}</h2>
+        <p 
+        [ngClass]="{visible: selectedIndex === focusedCard, hidden: selectedIndex != focusedCard}" 
+        class="card-description">{{ card.actionText }}</p>
+    </div>
+</div>

@@ -1,0 +1,254 @@
+:host {
+    --transition-duration: 0.3s;
+    display: block;
+    overflow: visible;
+    transition: all 0.5s ease;
+  }
+
+
+  .hidden {
+    display: none;
+  }
+
+  .visible {
+    display: block;
+  }
+  
+  .carousel-container {
+    display: flex;
+    justify-content: center;
+    transition: all 0.5s ease;
+    overflow: hidden;
+  }
+  
+  .carousel-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    transition: transform var(--transition-duration) ease;
+    transition: all 0.5s ease;
+  }
+  
+  .carousel-card {
+    flex: 0 0 var(--card-width);
+    margin-right: var(--card-margin);
+    transition: transform var(--transition-duration) ease;    position: absolute;
+    width: 162px !important;
+    height: 212px;
+    position: relative !important;
+
+    background: linear-gradient(360deg, #E9E9E9 0%, #FCFCFC 100%);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 10px !important;
+    margin: clamp(15px, 5%, 50px) !important;
+    
+    transition: all 0.5s ease;
+  }
+  
+  .carousel-card--focused {
+    width: 342px !important;
+    height: 422px;
+    z-index: 1;
+    overflow: none;
+    border-radius: 12px;
+    background: linear-gradient(360deg, #191919 0%, #373737 100%);
+    display: block;
+    transition: all 0.5s ease;
+    border-bottom: 5px solid rgba(254, 201, 5, 1);
+    padding-bottom: 5px;
+  }
+
+  .carousel-card--focused > .card-content{
+    height: 120px;
+    transition: all 0.5s ease;
+  }
+
+  .carousel-card--focused > .card-content{
+    width: 120px;
+    /* justify-content: center; */
+    display: flex;
+  }
+
+  .carousel-card--focused > .card-image{
+    padding-top: 72px;
+    justify-content: center;
+    display: flex;
+    transition: all 0.5s ease;
+  }
+
+  .carousel-card--focused .card-image img{
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    justify-content: center;
+    Top: 345px !important;
+    transition: all 0.5s ease;
+  }
+
+  .carousel-card--focused .card-title{
+    align-items: center;
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 35px;
+    width: 100%;
+
+    color: #FEFDFD;
+    transition: all 0.5s ease;
+  }
+
+  .carousel-card--focused .card-title{
+    width: 100%;
+  }
+
+  .carousel-card {
+    width: 162px;
+  }
+  
+  .carousel-card--focused .card-content{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    flex-direction: column;
+    color: #FEFDFD;
+    transition: all 0.5s ease;
+  }
+
+  .carousel-card--focused .card-description{
+    text-transform: uppercase !important;
+    font-family: Work Sans;
+    font-size: 12px !important;
+    font-weight: 600;
+    line-height: 14px;
+    letter-spacing: 0em;
+    padding-top: 10%;
+    padding-bottom: 49px;
+    padding-left: 123px;
+    padding-right: 123px;
+    text-align: center !important;
+    opacity: 100;
+    transition: opacity 1.0s ease;
+  }
+
+  /* .carousel-card--focused::after{
+    content: '';
+    display: block;
+    width: 342px;
+    height: 50px;
+    z-index: -1;
+    background: rgba(254, 201, 5, 1);
+    margin-top: 30px;
+    border-radius: 12px;
+    transition: all 0.5s ease;
+  }
+
+  .carousel-card::after{
+    content: '';
+    display: block;
+    z-index: -1;
+    margin-top: 30px;
+    border-radius: 12px;
+    transition: all 0.5s ease;
+  } */
+
+  /* .carousel-card--focused::before{
+    content: '';
+    display: block;
+    width: 342px;
+    height: 422px;
+    z-index: 1;
+    background: rgba(254, 201, 5, 1);
+    margin-top: 20px;
+    border-radius: 12px;
+  } */
+  
+
+  
+  
+  .carousel-card--focused + .carousel-card {
+    transform: translateX(var(--card-width));
+    transition: all 0.5s ease;
+  }
+  
+  .carousel-card--focused ~ .carousel-card {
+    transform: translateX(calc(-1 * var(--card-width) / 2));
+    transition: all 0.5s ease;
+  }
+  
+  .card-image img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    justify-content: center;
+    margin: 0 auto;
+    display: flex;
+    Top: 345px !important;
+    transition: all 0.5s ease;
+  }
+
+  .card-image{
+    padding-top: 42px;
+    padding-left: 51px;
+    padding-right: 51px;
+    transition: all 0.5s ease;
+  }
+  
+  .card-content {
+    display: flex;
+    margin-top: 32px;
+    color: #232323;
+    transition: all 0.5s ease;
+  }
+  
+  .card-title {
+    width: 100px;
+    height: 36px;
+
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 0.5s ease;
+  }
+  
+  .card-description {
+    font-family: 'Work Sans' !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    font-size: 16px !important;
+    line-height: 18px !important;
+    text-align: center !important;
+    transition: all 0.5s ease;
+
+  }
+  
+  @media (min-width: 1024px) {
+    :host {
+      --card-width: 162px;
+      --card-margin: 20px;
+      transition: all 0.5s ease;
+    }
+  }
+  
+  @media (max-width: 1023px) and (min-width: 768px) {
+    :host {
+      --card-width: 162px;
+      --card-margin: 20px;
+      transition: all 0.5s ease;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    :host {
+      --card-width: 162px;
+      --card-margin: 20px;
+      transition: all 0.5s ease;
+    }
+  }
+  

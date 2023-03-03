@@ -1,0 +1,110 @@
+:host {
+    --transition-duration: 0.5s;
+    display: block;
+    overflow: visible;
+
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .visible {
+    display: block;
+  }
+  
+  * {
+    transition: width 0.5s ease-in-out !important;
+    transition: height 0.5s ease-in-out !important;
+    transition: background-color 0.5s ease-in-out !important;
+    transition: all 0.8s ease-in-out !important;
+    /* outline: 1px solid red; */
+  }
+
+  .card-container {
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+  }
+  
+  .carousel-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: visible;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    pointer-events: none;
+
+    margin-top: 5%;
+    margin: 0 auto;
+  }
+  
+  .carousel-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: visible;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    transition: transform var(--transition-duration) ease;
+    height: 500px;
+
+  }
+  
+  .carousel-card {
+    flex: 0 0 var(--card-width);
+    margin: var(--card-margin);
+    transition: transform var(--transition-duration) ease;
+
+  }
+  
+  .carousel-card--focused {
+    transform: scale(1.5);
+    z-index: 1;
+
+  }
+
+  .controls-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    bottom: 20px;
+    width: 90%;
+    pointer-events: auto;
+    margin-top: -8%;
+    z-index: 2;
+
+  }
+  
+  .controls button {
+    font-size: 24px;
+    margin: 0 5px;
+    height: 30px;
+    width: 30px;
+    border: none;
+    background: #fefdfd;
+    color: #232323;
+    border-radius: 50%;
+    pointer-events: auto;
+    border: #232323 1px solid;
+  }
+  
+  .controls button:hover {
+    font-size: 24px;
+    margin: 0 5px;
+    height: 30px;
+    width: 30px;
+    border: none;
+    background: #232323;
+    color: #fefdfd;
+    border-radius: 50%;
+    pointer-events: auto;
+  }
+  
