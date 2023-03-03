@@ -78,7 +78,7 @@
     bottom: 20px;
     width: 90%;
     pointer-events: auto;
-    margin-top: -8%;
+    margin-top: -15%;
     z-index: 2;
 
   }
@@ -106,5 +106,61 @@
     color: #fefdfd;
     border-radius: 50%;
     pointer-events: auto;
+  }
+  
+  
+  @media (min-width: 1024px) {
+    :host {
+      --card-width: 162px;
+      --card-margin: 20px;
+      transition: all 0.5s ease;
+    }
+
+    .controls-container{
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }  
+    
+    .controls {
+      width: 55%;
+      justify-content: space-between;
+    }
+  }
+  
+  @media (max-width: 1023px) and (min-width: 768px) {
+    :host {
+      --card-width: 162px;
+      --card-margin: 20px;
+      transition: all 0.5s ease;
+    }
+    .controls-container{
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+    
+    .controls {
+      width: 70%;
+      justify-content: space-between;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    :host {
+      --card-width: 162px;
+      --card-margin: 20px;
+      transition: all 0.5s ease;
+    }
+    .controls-container{
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+    
+    .controls {
+      width: 100%;
+      justify-content: space-between;
+    }
   }
   
