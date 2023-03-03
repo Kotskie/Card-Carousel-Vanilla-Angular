@@ -83,7 +83,7 @@
 
   }
   
-  .controls button {
+  .controls button:hover {
     font-size: 24px;
     margin: 0 5px;
     height: 30px;
@@ -94,9 +94,10 @@
     border-radius: 50%;
     pointer-events: auto;
     border: #232323 1px solid;
+    cursor: pointer;
   }
   
-  .controls button:hover {
+  .controls button {
     font-size: 24px;
     margin: 0 5px;
     height: 30px;
@@ -106,6 +107,7 @@
     color: #fefdfd;
     border-radius: 50%;
     pointer-events: auto;
+    cursor: pointer;
   }
   
   
@@ -127,6 +129,36 @@
       justify-content: space-between;
     }
   }
+
+  .carousel-description {
+    position: absolute;
+    /* width: 100%; */
+    display: flex;
+    /* justify-content: center; */
+    height: 108px;
+    font-family: Work Sans;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 28px;
+    letter-spacing: 0em;
+    margin-left: 9em;
+    margin-top: 2%;
+    overflow: hidden;
+  }
+  .carousel-description p {
+    width: 182px;
+  }
+
+  .carousel-description span{
+    font-family: 'Work Sans';
+    font-style: bold !important;
+    font-weight: 800 !important;
+    font-size: 24px;
+    line-height: 28px;
+    overflow: visible;
+
+    color: #232323;
+  }
   
   @media (max-width: 1023px) and (min-width: 768px) {
     :host {
@@ -144,6 +176,10 @@
       width: 70%;
       justify-content: space-between;
     }
+    .carousel-description {
+      margin-left: 1em;
+      margin-top: 3%;
+    }
   }
   
   @media (max-width: 767px) {
@@ -156,11 +192,36 @@
       display: flex;
       justify-content: center;
       width: 100%;
+      margin-top: 7%;
     }
     
     .controls {
-      width: 100%;
+      width: 50%;
       justify-content: space-between;
+    }
+    .carousel-description {
+      position: relative;
+      /* width: 100%; */
+      height: fit-content;
+      display: flex;
+      /* justify-content: center; */
+      font-family: Work Sans;
+      font-size: 24px;
+      font-weight: 300;
+      margin-top: 00px;
+      margin-left: auto;
+      margin-right: auto;
+      overflow: hidden;
+    }
+    .carousel-description p {
+      width: 400px;
+      text-align: center;
+      margin: 0px !important;
+      padding: 0px !important;
+    }
+    .carousel-container {  
+      margin-top: 0%;
+      margin: 0 auto;
     }
   }
   
