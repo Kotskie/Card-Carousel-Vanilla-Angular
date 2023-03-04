@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'carousel', component: CarouselComponent },
   { path: 'pageNotFound', component: PageNotFoundComponent },
-  { path: '**', component: PageNotFoundComponent }
+  { path: '**', redirectTo: '/home', pathMatch: 'full' }
 ];
 
 
