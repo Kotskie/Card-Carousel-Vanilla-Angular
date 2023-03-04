@@ -3,7 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.0.
 
 ## Hosted Live Demo:
-https://kotskie.github.io/Card-Carousel-Vanilla-Angular/Card-Carousel-Vanilla-Angular/home
+https://kotskie.github.io/Card-Carousel-Vanilla-Angular
 
 ## Screen size previews
 ![Full Screen Display](https://user-images.githubusercontent.com/48470252/222780971-a676d9b5-1c16-4702-9253-2024456b2d47.png)
